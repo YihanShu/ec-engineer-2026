@@ -72,6 +72,7 @@ void MX_USB_HOST_Process(void);
   * @brief  The application entry point.
   * @retval int
   */
+uint32_t press_time = 0;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -111,20 +112,25 @@ int main(void)
       /* USER CODE END WHILE */
   	  //MX_USB_HOST_Process();
 
-  	  if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0) == GPIO_PIN_SET)	//PB Pressed
-  	  {
-  		  HAL_Delay(50);
-  		  if(HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0) == GPIO_PIN_SET)
-  		  {
-  			HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_SET);	//LED ON
-  		 	HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_SET);
-  		  }
-  	  }
-  	  else													//PB Released
-  	  {
-  	      HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12,GPIO_PIN_RESET);	//LED OFF
-  	 	  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13,GPIO_PIN_RESET);
-  	  }
+	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET)
+	  {
+		  press_time++;
+		  HAL_Delay(1);
+		  if(press_time > 3000)
+		  {
+			  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
+			  if ((press_time & 0x3FF) == 0)
+				  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+		  }
+
+	  }
+	  else
+	  {
+		  press_time = 0;
+		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12,GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13,GPIO_PIN_RESET);
+	  }
 
       /* USER CODE BEGIN 3 */
   }
