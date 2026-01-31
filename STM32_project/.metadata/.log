@@ -1,0 +1,132 @@
+!SESSION 2026-01-28 21:23:48.183 -----------------------------------------------
+eclipse.buildId=Version 1.5.1
+java.version=1.8.0_272
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-01-28 21:29:33.599
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-01-28 21:29:33.845
+!MESSAGE Log4j initialized with config file E:\STM32_project\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-01-28 21:29:41.980
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2026-01-28 21:29:43.187
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-01-28 21:33:47.859
+!MESSAGE Indexed 'STM32F407VGT6' (3 sources, 52 headers) in 5.6 sec: 1,920 declarations; 2,733 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.043%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-01-28 21:55:22.870
+!MESSAGE Indexed 'STM32F407G-DISC1' (36 sources, 99 headers) in 11.7 sec: 7,713 declarations; 48,078 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0036%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-01-29 20:39:55.863
+!MESSAGE Indexed 'STM32F407G-DISC1' (37 sources, 99 headers) in 3.52 sec: 7,754 declarations; 48,872 references; 0 unresolved inclusions; 3 syntax errors; 2 unresolved names (0.0035%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-01-29 20:51:30.780
+!MESSAGE Indexed 'STM32F407G-DISC1' (36 sources, 99 headers) in 2.83 sec: 7,713 declarations; 48,119 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.0036%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2026-01-29 20:58:15.101
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2026-01-29 20:58:35.204
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2026-01-29 20:59:08.184
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:32.928
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:32.930
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:32.980
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:33.250
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:35.835
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:35.837
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:38.949
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:38.951
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:39.125
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 20:59:39.127
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2026-01-29 20:59:39.463
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:21.188
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:21.190
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:21.368
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:21.371
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:56.118
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:56.118
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:56.308
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:00:56.309
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:01:58.735
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:01:58.738
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:01:58.953
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:01:58.954
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:03:39.818
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:03:39.819
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:03:40.042
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:03:40.044
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:04:09.679
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:04:09.682
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:04:09.881
+!MESSAGE Failed to get MCU from name: 
+
+!ENTRY com.st.stm32cube.ide.mcu.toolchain.arm-none 4 4 2026-01-29 21:04:09.882
+!MESSAGE Failed to get MCU from name: 

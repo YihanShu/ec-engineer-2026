@@ -1,0 +1,20 @@
+21:04:07 **** Incremental Build of configuration Release for project STM32F407G-DISC1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "STM32F407G-DISC1.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\STM32_project\STM32F407G-DISC1\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F407G-DISC1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F407G-DISC1.elf
+ 
+arm-none-eabi-objdump -h -S  STM32F407G-DISC1.elf  > "STM32F407G-DISC1.list"
+arm-none-eabi-objcopy  -O binary  STM32F407G-DISC1.elf  "STM32F407G-DISC1.bin"
+arm-none-eabi-size   STM32F407G-DISC1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15500	    152	   3528	  19180	   4aec	STM32F407G-DISC1.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F407G-DISC1.bin
+ 
+Finished building: STM32F407G-DISC1.list
+ 
+
+21:04:09 Build Finished. 0 errors, 0 warnings. (took 1s.883ms)
+
