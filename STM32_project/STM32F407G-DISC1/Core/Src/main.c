@@ -73,6 +73,13 @@ void MX_USB_HOST_Process(void);
   * @retval int
   */
 uint32_t press_time = 0;
+typedef enum {
+	S5,//Power off
+	S4,//LED1
+	S3,//LED1+LED2
+	S0//ALL LEDs
+}p_state;
+p_state state = S5;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -111,25 +118,39 @@ int main(void)
   {
       /* USER CODE END WHILE */
   	  //MX_USB_HOST_Process();
-
 	  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET)
 	  {
-		  press_time++;
-		  HAL_Delay(1);
-		  if(press_time > 3000)
+		  HAL_Delay(50);
+		  if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET)
 		  {
-			  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
-			  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);
-			  if ((press_time & 0x3FF) == 0)
-				  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_14);
+			  switch(state)
+			  {
+			  case S5:
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET); //LED1
+				  state = S4;
+				  break;
+			  case S4:
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);  //LED1 LED2
+				  state = S3;
+				  break;
+			  case S3:
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);  //All LEDs
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+				  state = S0;
+				  break;
+			  case S0:
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_RESET);
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_RESET);
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_RESET);
+				  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_RESET);
+				  state = S5;
+				  break;
+			  }
+			  while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET) {
+			      HAL_Delay(10);                                        //Used for waiting GPIO_PIN_RESET to go next loop.This is unique.
+			  }
+			  //HAL_Delay(20); // 额外去抖
 		  }
-
-	  }
-	  else
-	  {
-		  press_time = 0;
-		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12,GPIO_PIN_RESET);
-		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13,GPIO_PIN_RESET);
 	  }
 
       /* USER CODE BEGIN 3 */
